@@ -25,7 +25,7 @@ class PlannerAgent:
             "target_column": target_column,
             "steps": ["Exploratory_data_analysis",
                       "feature_engineering",
-                      "modelingmodel_training", 
+                      "model_training", 
                       "evaluation"
                       ]
         }
@@ -35,4 +35,4 @@ class PlannerAgent:
             "target_column": target_column,
             "plan": plan
         }
-    print("Planner decided:", plan)
+    
