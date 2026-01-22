@@ -19,3 +19,6 @@ class AnalysisState:
 
     #---Error Handling-----
     errors: Optional[str]= None
+    model_type:Optional[str]=None
+    model_metrics:Optional[Dict[str, Any]]= None
+    model_artifact_path: Optional[str]= None

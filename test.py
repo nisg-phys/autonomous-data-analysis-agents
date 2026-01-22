@@ -18,11 +18,13 @@ state.target_column = result["plan"]["target_column"]
 # print(eda_result)
 #print(result)
 df=pd.read_csv("data/raw/adult.csv")
-print(df.columns[-1])
-print(df["income"].value_counts().to_dict())
-plt.figure()
-df["income"].value_counts().plot(kind='bar')
-plt.show()
+print(df.drop(columns=["income"]))
+print(df["income"])
+# print(df.columns[-1])
+# print(df["income"].value_counts().to_dict())
+# plt.figure()
+# df["income"].value_counts().plot(kind='bar')
+# plt.show()
 
 # summary={
 #             "num_rows": df.shape[0],
