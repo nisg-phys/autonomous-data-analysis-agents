@@ -2,9 +2,10 @@ from agents.planner import PlannerAgent
 from agents.eda import EDAAgent
 from state import AnalysisState
 from agents.modeling import ModelingAgent
+from agents.explanation import ExplanationAgent
 
 def main():
-    state= AnalysisState(dataset_path="data/raw/adult.csv")
+    state= AnalysisState(dataset_path="data/adult.csv")
     planner= PlannerAgent()
     result = planner.run(state.dataset_path)
     state.dataset_summary = result["dataset_summary"]
@@ -43,5 +44,17 @@ def main():
     print("Model type:", state.model_type)
     print("Metrics", state.model_metrics)
     print("Model saved at", state.model_artifact_path)
+
+    #-----Explanation-------
+    explanation_agent = ExplanationAgent()
+
+    final_report = explanation_agent.run(
+        eda_summary=state.eda_summary,
+        model_metrics= state.model_metrics,
+        task_type=state.task_type,
+        target_column=state.target_column)
+    state.final_report= final_report
+    print("\n======FINAL REPORT======")
+    print(state.final_report)
 if __name__ == "__main__":
     main()

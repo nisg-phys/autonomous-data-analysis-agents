@@ -4,22 +4,22 @@ from agents.eda import EDAAgent
 from state import AnalysisState
 from typing import Dict
 import matplotlib.pyplot as plt
-planner = PlannerAgent()
-state= AnalysisState(dataset_path="data/raw/adult.csv")
-result = planner.run(state.dataset_path)
-state.dataset_summary = result["dataset_summary"]
-state.plan = result["plan"]
-state.task_type = result["plan"]["task_type"]
-state.target_column = result["plan"]["target_column"]
+# planner = PlannerAgent()
+# state= AnalysisState(dataset_path="data/raw/adult.csv")
+# result = planner.run(state.dataset_path)
+# state.dataset_summary = result["dataset_summary"]
+# state.plan = result["plan"]
+# state.task_type = result["plan"]["task_type"]
+# state.target_column = result["plan"]["target_column"]
 
 # eda_agent = EDAAgent()
 # eda_result = eda_agent.run(dataset_path= state.dataset_path,
 #                            target_column= state.target_column)
 # print(eda_result)
 #print(result)
-df=pd.read_csv("data/raw/adult.csv")
-print(df.drop(columns=["income"]))
-print(df["income"])
+# df=pd.read_csv("data/raw/adult.csv")
+# print(df.drop(columns=["income"]))
+# print(df["income"])
 # print(df.columns[-1])
 # print(df["income"].value_counts().to_dict())
 # plt.figure()
@@ -61,4 +61,8 @@ print(df["income"])
         #     "target_column": target_column,
         #     "plan": plan
         # }
-    
+class Dog:
+    def bark(response):
+        return response
+print(Dog.bark("Bark"))   
+Dog()

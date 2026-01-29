@@ -22,3 +22,6 @@ class AnalysisState:
     model_type:Optional[str]=None
     model_metrics:Optional[Dict[str, Any]]= None
     model_artifact_path: Optional[str]= None
+
+    #--------Explanation outputs-------
+    final_report:Optional[str]= None
