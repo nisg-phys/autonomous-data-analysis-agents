@@ -64,35 +64,6 @@ LangGraph is a framework for building **graph-based execution pipelines**, where
 
 ---
 
-## System Architecture
-
-### High-Level Execution Flow
-
-# Autonomous Multi-Agent Data Analysis System  
-*(LangGraph + LLM + Evaluation)*
-
-This repository implements an **autonomous data analysis pipeline** built using a **multi-agent architecture**. The system performs **end-to-end structured data analysis**, including:
-
-- Exploratory data analysis (EDA)
-- Machine learning model training using *scikit-learn*
-- Natural-language explanation generation using a large language model (LLM)
-- Automated system evaluation and validation
-
-Two execution modes are supported:
-
-1. **Sequential execution (`main.py`)**
-2. **Graph-based orchestration using LangGraph (`graph.py`)**
-
-The project is intended primarily as a **learning and research-oriented system** to explore:
-
-- agent-based AI workflows  
-- graph-based orchestration  
-- structured AI system evaluation  
-
----
-
-## System Architecture
-
 
 
 ### Execution Graph
@@ -135,28 +106,28 @@ The project is intended primarily as a **learning and research-oriented system**
 ## Project Structure
 
 autonomous-data-analysis-agents/
-│
-├── agents/
-│ ├── planner.py
-│ ├── eda.py
-│ ├── modeling.py
-│ ├── explanation.py
-│ └── evaluation.py
-│
-├── data/
-│ └── raw/
-│ └── adult.csv
-│
-├── artifacts/
-│ ├── plots/
-│ └── models/
-│
-├── graph.py
-├── main.py
-├── state.py
-├── test.py
-├── requirements.txt
-└── README.md
+- │
+- ├── agents/
+- │ ├── planner.py
+- │ ├── eda.py
+- │ ├── modeling.py
+- │ ├── explanation.py
+- │ └── evaluation.py
+- │
+- ├── data/
+- │ └── raw/
+- │ └── adult.csv
+- │
+- ├── artifacts/
+- │ ├── plots/
+- │ └── models/
+- │
+- ├── graph.py
+- ├── main.py
+- ├── state.py
+- ├── test.py
+- ├── requirements.txt
+- └── README.md
 
 
 ---
@@ -315,7 +286,7 @@ Planned extensions include:
 
 # Notes
 This project is designed primarily as:
-An educational reference
-A research-oriented system
-An experimental platform for studying agentic AI workflows
-It is not intended as a production deployment system.
+- An educational reference
+- A research-oriented system
+- An experimental platform for studying agentic AI workflows
+- It is not intended as a production deployment system.
